@@ -1,0 +1,21 @@
+.circular-bar-graph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+  
+  .graph-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Styling adjustments */
+  path {
+    transition: fill 0.3s;
+  }
+  
+  path:hover {
+    opacity: 0.7;
+  }
+  

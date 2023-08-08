@@ -1,0 +1,19 @@
+.header {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DEE2E6
+}
+
+.logo {
+    width: 90.7px;
+}
+.header-right {
+    display: flex;
+    gap: 16px;
+}
+.header-right>img {
+    width: 36px;
+    height: 36px;
+}

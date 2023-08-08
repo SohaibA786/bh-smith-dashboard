@@ -1,0 +1,7 @@
+.main {
+    /* background-color: pink; */
+    margin: 24px 24px 24px 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
