@@ -58,9 +58,39 @@ function Stats() {
                     </div>
                 </div>
             </div>
-
+            {/* Stat 2 */}
+            <div className='right-stat-container'>
+                <div className='one-text left'>
+                    <div className='a'>
+                        <span className='b'>125.96</span> kWh<br />From PV
+                    </div>
+                    <div className='c'>
+                        (52.40%)
+                    </div>
+                </div>
+                <svg className='stat-1' height="220" width="220">
+                    <circle cx="110" cy="110"
+                        r="100" fill="none" stroke="rgba(205,212,217,0.5)" strokeWidth="20"
+                        strokeDasharray={`${strokeLength[0]},${circumferences[0]}`} />
+                    <circle className='rotation2' cx="110" cy="110"
+                        r="100" fill="none" stroke="#E58C2B" strokeWidth="20"
+                        strokeDasharray={`326.7,${circumferences[0]}`} />
+                    <circle className='rotation2' cx="110" cy="110"
+                        r="80" fill="none" stroke="#CDD4D988" strokeWidth="2" />
+                    <text className="svg-text" x="58" y="115">Consumption</text>
+                </svg>
+                <div className='one-text right'>
+                    <div className='a'>
+                        <span className='b'>114.40</span> kWh<br />From Grid
+                    </div>
+                    <div className='c'>
+                        (47.60%)
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
+
 
 export default Stats

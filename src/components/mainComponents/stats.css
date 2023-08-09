@@ -5,7 +5,7 @@
 
 .left-stat-container {
     padding: 22px 28px;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -16,9 +16,9 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
 }
 
-.stat-1 {
+/* .stat-1 {
     background-color: yellow;
-}
+} */
 
 .rotation {
     transform: rotate(-90deg);
@@ -63,7 +63,7 @@
     gap: 15px;
     justify-content: left;
     align-items: center;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .stat-info>.ball {
@@ -117,4 +117,93 @@
     font-style: normal;
     font-weight: 700;
     line-height: 19.2px;
+}
+
+.right-stat-container {
+    padding: 22px 28px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
+}
+
+.right-stat-container .one-text {
+    border: 1px solid #FF7F1E;
+    padding: 28px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-stat-container .left {
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.right-stat-container .right {
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+
+.right-stat-container .b {
+    color: #FF7F1E;
+    text-align: right;
+
+    /* Windows/Header/H5 */
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 150% */
+}
+
+.right-stat-container .a {
+    color: #072A40;
+    text-align: center;
+
+    /* Windows/Body/Regular */
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+}
+
+.right-stat-container .c {
+    color: #072A40;
+    text-align: center;
+
+    /* Windows/Body/Lead */
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+}
+
+.rotation2 {
+    transform: rotate(85deg);
+    transform-origin: center;
+    stroke: linear-gradient(to right, red, yellow);
+}
+
+.right-stat-container .svg-text {
+    color: #072A40;
+    text-align: center;
+
+    /* Windows/Header/H5 */
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 150% */
 }
