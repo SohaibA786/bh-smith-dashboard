@@ -1,21 +1,120 @@
-.circular-bar-graph {
+.stat-container {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.left-stat-container {
+    padding: 22px 28px;
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    height: 300px;
-  }
-  
-  .graph-container {
-    width: 200px;
-    height: 200px;
-  }
-  
-  /* Styling adjustments */
-  path {
-    transition: fill 0.3s;
-  }
-  
-  path:hover {
-    opacity: 0.7;
-  }
-  
+    align-items: center;
+    gap: 53px;
+
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
+}
+
+.stat-1 {
+    background-color: yellow;
+}
+
+.rotation {
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.svg-text-up {
+    fill: #045097;
+    text-align: center;
+
+    /* IOS/Header/H5 */
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 133.333% */
+}
+
+.svg-text-down {
+    fill: #045097;
+    text-align: right;
+
+    /* IOS/Body/Small */
+    font-family: Plus Jakarta Sans;
+    font-size: 12.8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px;
+    /* 150% */
+}
+
+.left-stat-container .left-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.left-stat-container .stat-info {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: left;
+    align-items: center;
+    background-color: pink;
+}
+
+.stat-info>.ball {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.stat-info>.color1 {
+    background-color: #045097;
+}
+
+.stat-info>.color2 {
+    background-color: #60B8EE;
+}
+
+.stat-info>.color3 {
+    background-color: #CDDCEA;
+}
+
+.left-stat-container .value {
+    color: #FF7F1E;
+
+    /* Windows/Header/H5 */
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 150% */
+}
+
+.left-stat-container .normal {
+    color: #495057;
+
+    /* Windows/Body/Small */
+    font-family: Plus Jakarta Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px;
+    /* 192% */
+}
+
+.left-stat-container .percent {
+    color: #072A40;
+
+    /* Windows/Header/H6 */
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.2px;
+}

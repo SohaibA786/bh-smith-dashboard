@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     /* background-color: purple; */
-    gap: 24px;
+    gap: 19px;
     justify-content: space-between;
     /* background-color: purple; */
 }
@@ -34,8 +34,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
-    min-width: 300px;
+    gap: 18px;
 }
 
 .infoImg {

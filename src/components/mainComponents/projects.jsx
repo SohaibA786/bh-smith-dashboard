@@ -15,7 +15,7 @@ function Projects() {
             status: 'Active',
         },
         {
-            id: 1,
+            id: 2,
             siteName: 'Project A',
             location: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
             installationDate: '2023-08-01',
@@ -23,7 +23,7 @@ function Projects() {
             status: 'Active',
         },
         {
-            id: 1,
+            id: 3,
             siteName: 'Project A',
             location: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
             installationDate: '2023-08-01',
