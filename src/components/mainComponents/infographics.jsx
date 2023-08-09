@@ -1,5 +1,7 @@
 import './infographics.css'
-import truck from '../../assets/rect.png'
+import truck from '../../assets/truck.gif'
+import chimney from '../../assets/chimney.gif'
+import tree from '../../assets/tree-f.gif'
 
 
 function Info() {
@@ -23,7 +25,7 @@ function Info() {
                 <div className='info back2'>
                     {/* Image */}
                     <div>
-                        <img className='infoImg' src={truck} alt='Truck' />
+                        <img className='infoImg' src={chimney} alt='Truck' />
                     </div>
                     {/* Text */}
                     <div className='infoText'>
@@ -35,7 +37,7 @@ function Info() {
                 <div className='info back3'>
                     {/* Image */}
                     <div>
-                        <img className='infoImg' src={truck} alt='Truck' />
+                        <img className='infoImg' src={tree} alt='Truck' />
                     </div>
                     {/* Text */}
                     <div className='infoText'>

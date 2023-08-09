@@ -20,3 +20,7 @@
 .nav > img {
     width: 20px;
 }
+
+.mouse-hover:hover {
+    cursor: pointer;
+}

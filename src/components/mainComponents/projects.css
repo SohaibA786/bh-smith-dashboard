@@ -6,7 +6,7 @@
 
     border-radius: 6px;
     background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.11);
 }
 
 .heading {
@@ -62,6 +62,10 @@
     gap: 16px;
 }
 
+.new-project:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #E58C2B 0%, #E58C2B77 100%);
+}
 
 .button-text {
     color: #FFF;
@@ -107,4 +111,54 @@
 
 .options-icon {
     cursor: pointer;
+}
+
+.project-table .sort {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.project-table .badge {
+    color: white;
+    background-color: #868E96;
+    border-radius: 50px;
+    padding: 4px 12px;
+}
+
+.project-table .badge-under {
+    color: #000;
+    text-align: center;
+
+    /* Windows/Body/Small */
+    font-family: Plus Jakarta Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px;
+    /* 192% */
+}
+
+.project-table .table-headings {
+    color: #000;
+
+    /* Windows/Header/H6 */
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.2px;
+    /* 137.143% */
+}
+
+.project-table .table-body {
+    color: #000;
+
+    /* Windows/Body/Regular */
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
 }
