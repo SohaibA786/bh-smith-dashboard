@@ -13,6 +13,7 @@ function Stats() {
         <div className='stat-container'>
             {/* Stat 1 */}
             <div className='left-stat-container'>
+                <div className='stat-bg'></div>
                 {/* Stat 1 chart */}
                 <svg className='stat-1' height="220" width="220">
                     <circle className='rotation' cx="110" cy="110"
@@ -60,6 +61,7 @@ function Stats() {
             </div>
             {/* Stat 2 */}
             <div className='right-stat-container'>
+            <div className='stat-bg'></div>
                 <div className='one-text left'>
                     <div className='a'>
                         <span className='b'>125.96</span> kWh<br />From PV
