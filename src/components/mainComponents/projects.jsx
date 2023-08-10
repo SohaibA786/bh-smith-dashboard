@@ -48,24 +48,25 @@ function Projects() {
 
     return (
         <div className='project-container'>
-            <h2 className='heading'>My Projects</h2>
-            <div className='search'>
-                <div className='search-box'>
-                    <img className='search-icon' src={search} alt='search icon' />
-                    <input
-                        className='input'
-                        type='text'
-                        placeholder='Search by site/customer name'
-                        value={searchQuery}
-                        onChange={handleSearchChange}
-                    />
-                </div>
-                <div className='new-project'>
-                    <span className='button-text'>+</span>
-                    <span className='button-text'>Create new project</span>
+            <div className='first-row'>
+                <h2 className='heading'>My Projects</h2>
+                <div className='search'>
+                    <div className='search-box'>
+                        <img className='search-icon' src={search} alt='search icon' />
+                        <input
+                            className='input'
+                            type='text'
+                            placeholder='Search by site/customer name'
+                            value={searchQuery}
+                            onChange={handleSearchChange}
+                        />
+                    </div>
+                    <div className='new-project'>
+                        <span className='button-text'>+</span>
+                        <span className='button-text'>Create new project</span>
+                    </div>
                 </div>
             </div>
-
             <div className="project-table-container">
                 <table className="project-table">
                     <thead>
