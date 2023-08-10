@@ -1,7 +1,10 @@
 .stat-container {
     display: flex;
     justify-content: space-between;
+    gap: 52px;
 }
+
+/* Left Stat */
 
 .left-stat-container {
     padding: 22px 28px;
@@ -19,6 +22,8 @@
     background-image: url('../../assets/stat1.png');
     background-position: center;
     background-size: cover;
+
+    flex: 1;
 }
 
 .stat-bg {
@@ -133,6 +138,8 @@
     line-height: 19.2px;
 }
 
+/* Right Stat */
+
 .right-stat-container {
     padding: 22px 28px;
     /* background-color: aqua; */
@@ -150,6 +157,8 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
+
+    flex: 1;
 }
 
 .right-stat-container .one-text {
