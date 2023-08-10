@@ -2,8 +2,9 @@ import React from 'react';
 import './stats.css';
 
 function Stats() {
-    let strokeWidth = 20;
-    let radii = [100, 80, 60];
+    let strokeWidth = 15;
+    let radii = [80, 65, 50];
+    let [cx, cy] = [90, 90];
     let circumferences = radii.map(val => val * 2 * Math.PI);
     let percentages = [100, 87.73, 20.27];
     let strokeLength = circumferences.map((cir, index) => cir * percentages[index] / 100);
@@ -15,18 +16,18 @@ function Stats() {
             <div className='left-stat-container'>
                 <div className='stat-bg'></div>
                 {/* Stat 1 chart */}
-                <svg className='stat-1' height="220" width="220">
-                    <circle className='rotation' cx="110" cy="110"
-                        r={radii[0]} fill="none" stroke="#045097" strokeWidth="20"
+                <svg className='stat-1' height="180" width="180">
+                    <circle className='rotation' cx={cx} cy={cy}
+                        r={radii[0]} fill="none" stroke="#045097" strokeWidth={strokeWidth}
                         strokeDasharray={`${strokeLength[0]},${circumferences[0]}`} />
-                    <circle className='rotation' cx="110" cy="110"
-                        r={radii[1]} fill="none" stroke="#60B8EE99" strokeWidth="20"
+                    <circle className='rotation' cx={cx} cy={cy}
+                        r={radii[1]} fill="none" stroke="#60B8EE99" strokeWidth={strokeWidth}
                         strokeDasharray={`${strokeLength[1]},${circumferences[1]}`} />
-                    <circle className='rotation' cx="110" cy="110"
-                        r={radii[2]} fill="none" stroke="#04509733" strokeWidth="20"
+                    <circle className='rotation' cx={cx} cy={cy}
+                        r={radii[2]} fill="none" stroke="#04509733" strokeWidth={strokeWidth}
                         strokeDasharray={`${strokeLength[2]},${circumferences[2]}`} />
-                    <text className="svg-text-up" x="87" y="110">Yield</text>
-                    <text className="svg-text-down" x="94" y="125">KWH</text>
+                    <text className="svg-text-up" x="67" y="89">Yield</text>
+                    <text className="svg-text-down" x="75" y="105">KWH</text>
                 </svg>
                 {/* Stat 1 text */}
                 <div className='left-text-container'>
@@ -70,16 +71,16 @@ function Stats() {
                         (52.40%)
                     </div>
                 </div>
-                <svg className='stat-1' height="220" width="220">
-                    <circle cx="110" cy="110"
-                        r="100" fill="none" stroke="rgba(205,212,217,0.5)" strokeWidth="20"
+                <svg className='stat-1' height="180" width="180">
+                    <circle cx={cx} cy={cy}
+                        r={radii[0]} fill="none" stroke="rgba(205,212,217,0.5)" strokeWidth={strokeWidth}
                         strokeDasharray={`${strokeLength[0]},${circumferences[0]}`} />
-                    <circle className='rotation2' cx="110" cy="110"
-                        r="100" fill="none" stroke="#E58C2B" strokeWidth="20"
+                    <circle className='rotation2' cx={cx} cy={cy}
+                        r={radii[0]} fill="none" stroke="#E58C2B" strokeWidth={strokeWidth}
                         strokeDasharray={`326.7,${circumferences[0]}`} />
-                    <circle className='rotation2' cx="110" cy="110"
-                        r="80" fill="none" stroke="#CDD4D988" strokeWidth="2" />
-                    <text className="svg-text" x="58" y="115">Consumption</text>
+                    <circle className='rotation2' cx={cx} cy={cy}
+                        r="63" fill="none" stroke="#CDD4D988" strokeWidth="2" />
+                    <text className="svg-text" x="37" y="97">Consumption</text>
                 </svg>
                 <div className='one-text right'>
                     <div className='a'>
