@@ -225,7 +225,7 @@
 .rotation2 {
     transform: rotate(85deg);
     transform-origin: center;
-    stroke: linear-gradient(to right, red, yellow);
+    /* stroke: linear-gradient(to right, red, yellow); */
 }
 
 .right-stat-container .svg-text {
@@ -299,4 +299,10 @@
 
 .ball-text {
     width: 119.4px;
+}
+
+.right-stat-container svg {
+    z-index: 5;
+    opacity: 1 !important;
+    /* background-color: red !important; */
 }

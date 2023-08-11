@@ -3,6 +3,17 @@ import './stats.css';
 import CountUp from 'react-countup';
 
 function Stats() {
+
+    let per = 100;
+    let strokeDasharray = "";
+
+    for (let i = 0; i < per; i++) {
+        strokeDasharray += "2.5133 2.5133 ";
+    }
+    strokeDasharray += "0 10000";
+
+    console.log("strokeDasharray", strokeDasharray);
+
     let strokeWidth = 15;
     let radii = [80, 65, 50];
     let [cx, cy] = [90, 90];
@@ -126,7 +137,15 @@ function Stats() {
                         (52.40%)
                     </div>
                 </div>
-                <svg className='stat-1' height="180" width="180">
+                <svg height="180" width="180">
+                    <circle cx="90" cy="90" r="80" stroke="rgba(255,255,255,0.8)" strokeWidth="15" fill="none" strokeDasharray="2.5133 2.5133 " />
+                    <circle className='rotation2' cx="90" cy="90" r="80" stroke="#EF9029" strokeWidth="15" fill="none" strokeDasharray={strokeDasharray} />
+                    <circle className='rotation2' cx={cx} cy={cy}
+                        r="63" fill="none" stroke="#CDD4D988" strokeWidth="2" />
+                    <text className="svg-text" x="37" y="97">Consumption</text>
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+                {/* <svg className='stat-1' height="180" width="180">
                     <circle cx={cx} cy={cy}
                         r={radii[0]} fill="none" stroke="rgba(205,212,217,0.5)" strokeWidth={strokeWidth}
                         strokeDasharray={`${strokeLength[0]},${circumferences[0]}`} />
@@ -136,7 +155,7 @@ function Stats() {
                     <circle className='rotation2' cx={cx} cy={cy}
                         r="63" fill="none" stroke="#CDD4D988" strokeWidth="2" />
                     <text className="svg-text" x="37" y="97">Consumption</text>
-                </svg>
+                </svg> */}
                 <div className='one-text right'>
                     <div className='a'>
                         <span className='b'>114.40</span> kWh<br />From Grid

@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png'
-import notification from '../assets/notification.png'
+import notification from '../assets/bell.svg'
 import avatar from '../assets/avatar.svg'
 import './header.css'
 
@@ -14,7 +14,7 @@ function Header() {
                 </div>
                 {/* profile & notifications */}
                 <div className='header-right'>
-                    <img src={notification} alt='Notification Logo' />
+                    <img className='bell-size' src={notification} alt='Notification Logo' />
                     <img  src={avatar} alt='Notification Logo' />
                 </div>
             </header>
