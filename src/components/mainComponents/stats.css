@@ -7,11 +7,11 @@
 /* Left Stat */
 
 .left-stat-container {
-    padding: 22px 28px;
+    padding: 22px 0px;
     /* background-color: chartreuse; */
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 53px;
 
@@ -33,8 +33,10 @@
     position: absolute;
     z-index: 1;
 }
+
 .stat-1 {
     z-index: 2;
+    overflow: visible;
     /* background-color: yellow; */
 }
 
@@ -74,6 +76,7 @@
     flex-direction: column;
     gap: 20px;
     z-index: 2;
+    min-width: 164.4;
 }
 
 .left-stat-container .stat-info {
@@ -236,4 +239,64 @@
     font-weight: 700;
     line-height: 24px;
     /* 150% */
+}
+
+
+
+/* Animations */
+.scale:hover {
+    transform: scale(1.5);
+    transform: rotate(-90deg);
+    stroke-width: 30;
+}
+
+
+.anim-1 {
+    stroke-dasharray: 0, 502.6548245743669;
+    animation: one 2s ease-out 1s forwards ;
+}
+
+@keyframes one {
+    from {
+        stroke-dasharray: 0, 502.6548245743669;
+    }
+
+    to {
+        stroke-dasharray: 502.6548245743669, 502.6548245743669;
+    }
+}
+
+.anim-2 {
+    stroke-dasharray: 0, 408.4070449666731;
+    animation: two 1.5s ease-out 1s forwards;
+}
+
+@keyframes two {
+    from {
+        stroke-dasharray: 0, 408.4070449666731;
+    }
+
+    to {
+        stroke-dasharray: 358.2955005492623, 408.4070449666731;
+    }
+}
+
+.anim-3 {
+    stroke-dasharray: 0, 314.1592653589793;
+    animation: three 1s ease-out 1s forwards ;
+}
+
+@keyframes three {
+    from {
+        stroke-dasharray: 0, 314.1592653589793;
+    }
+
+    to {
+        stroke-dasharray: 63.68008308826511, 314.1592653589793;
+    }
+}
+
+
+.ball-text {
+    width: 115.4;
 }

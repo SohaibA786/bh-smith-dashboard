@@ -1,5 +1,6 @@
 import React from 'react';
 import './stats.css';
+import CountUp from 'react-countup';
 
 function Stats() {
     let strokeWidth = 15;
@@ -17,13 +18,13 @@ function Stats() {
                 <div className='stat-bg'></div>
                 {/* Stat 1 chart */}
                 <svg className='stat-1' height="180" width="180">
-                    <circle className='rotation' cx={cx} cy={cy}
+                    <circle className='rotation scale anim-1' cx={cx} cy={cy}
                         r={radii[0]} fill="none" stroke="#045097" strokeWidth={strokeWidth}
-                        strokeDasharray={`${strokeLength[0]},${circumferences[0]}`} />
-                    <circle className='rotation' cx={cx} cy={cy}
+                    />
+                    <circle className='rotation scale anim-2' cx={cx} cy={cy}
                         r={radii[1]} fill="none" stroke="#60B8EE99" strokeWidth={strokeWidth}
                         strokeDasharray={`${strokeLength[1]},${circumferences[1]}`} />
-                    <circle className='rotation' cx={cx} cy={cy}
+                    <circle className='rotation scale anim-3' cx={cx} cy={cy}
                         r={radii[2]} fill="none" stroke="#04509733" strokeWidth={strokeWidth}
                         strokeDasharray={`${strokeLength[2]},${circumferences[2]}`} />
                     <text className="svg-text-up" x="67" y="89">Yield</text>
@@ -35,34 +36,88 @@ function Stats() {
                     <div className='stat-info'>
                         <div className='ball color1'></div>
                         <div className='ball-text'>
-                            <span className='value'>160.53 kWh</span><br />
+                            <span className='value'>
+                                <CountUp
+                                    start={0.0}
+                                    end={160.53}
+                                    duration={2}
+                                    delay={1}
+                                    separator=" "
+                                    decimals={2}
+                                />
+                                kWh</span><br />
                             <span className='normal'>Total - </span>
-                            <span className='percent'>{percentages[0]}%</span>
+                            <span className='percent'>
+                                <CountUp
+                                    start={0}
+                                    end={percentages[0]}
+                                    duration={2}
+                                    delay={1}
+                                    separator=" "
+                                    decimals={0}
+                                />
+                                %
+                            </span>
                         </div>
                     </div>
                     {/* two */}
                     <div className='stat-info'>
                         <div className='ball color2'></div>
                         <div className='ball-text'>
-                            <span className='value'>140.84 kWh</span><br />
+                            <span className='value'>
+                                <CountUp
+                                    start={0}
+                                    end={140.84}
+                                    duration={1.5}
+                                    delay={1}
+                                    separator=" "
+                                    decimals={2}
+                                />
+                                kWh</span><br />
                             <span className='normal'>Consumed - </span>
-                            <span className='percent'>{percentages[1]}%</span>
+                            <span className='percent'>
+                                <CountUp
+                                    start={0}
+                                    end={percentages[1]}
+                                    duration={1.5}
+                                    delay={1}
+                                    separator=" "
+                                    decimals={2}
+                                />
+                                %</span>
                         </div>
                     </div>
                     {/* three */}
                     <div className='stat-info'>
                         <div className='ball color3'></div>
                         <div className='ball-text'>
-                            <span className='value'>19.69 kWh</span><br />
+                            <span className='value'>
+                                <CountUp
+                                    start={0}
+                                    end={19.69}
+                                    duration={1}
+                                    delay={1}
+                                    separator=" "
+                                    decimals={2}
+                                /> kWh</span><br />
                             <span className='normal'>Fed to Grid - </span>
-                            <span className='percent'>{percentages[2]}%</span>
+                            <span className='percent'>
+                                <CountUp
+                                    start={0}
+                                    end={percentages[2]}
+                                    duration={1}
+                                    delay={1}
+                                    separator=" "
+                                    decimals={2}
+                                />
+                                %</span>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Stat 2 */}
             <div className='right-stat-container'>
-            <div className='stat-bg'></div>
+                <div className='stat-bg'></div>
                 <div className='one-text left'>
                     <div className='a'>
                         <span className='b'>125.96</span> kWh<br />From PV

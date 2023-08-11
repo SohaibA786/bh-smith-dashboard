@@ -15,7 +15,7 @@ function Header() {
                 {/* profile & notifications */}
                 <div className='header-right'>
                     <img src={notification} alt='Notification Logo' />
-                    <img src={avatar} alt='Notification Logo' />
+                    <img  src={avatar} alt='Notification Logo' />
                 </div>
             </header>
         </>

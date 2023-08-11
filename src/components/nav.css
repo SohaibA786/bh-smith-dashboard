@@ -17,10 +17,20 @@
     flex-shrink: 0;
 }
 
-.nav > img {
-    width: 20px;
+
+.nav path {
+    transition: all 0.2s ease-out;
 }
 
-.mouse-hover:hover {
+
+.nav .mouse-hover:hover {
     cursor: pointer;
+}
+
+.mouse-hover:hover  path{
+    fill: #FF7C1B ;
+}
+
+.active path {
+    fill: #FF7C1B;
 }
