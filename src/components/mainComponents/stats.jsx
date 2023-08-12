@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 
 function Stats() {
 
-    let per = 100;
+    let per = 53;
     let strokeDasharray = "";
 
     for (let i = 0; i < per; i++) {

@@ -223,7 +223,7 @@
 }
 
 .rotation2 {
-    transform: rotate(85deg);
+    transform: rotate(90deg);
     transform-origin: center;
     /* stroke: linear-gradient(to right, red, yellow); */
 }
