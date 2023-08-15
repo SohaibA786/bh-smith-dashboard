@@ -19,7 +19,7 @@ function Projects() {
             id: 2,
             siteName: 'Project A',
             location: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-            installationDate: '2023/08/01',
+            installationDate: '2022/08/01',
             customer: 'Customer B',
             status: 'Active',
             lastUpdate: '2023/10/01',
@@ -28,7 +28,7 @@ function Projects() {
             id: 3,
             siteName: 'Project A',
             location: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-            installationDate: '2023/08/01',
+            installationDate: '2021/08/01',
             customer: 'Customer C',
             status: 'Active',
             lastUpdate: '2023/10/01',
@@ -44,6 +44,24 @@ function Projects() {
 
     const handleSearchChange = (event) => {
         setSearchQuery(event.target.value);
+    };
+
+
+    const [sortOrder, setSortOrder] = useState('desc'); // Default sorting order
+
+    const handleSortClick = () => {
+        const newSortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+        setSortOrder(newSortOrder);
+
+        const sortedProjects = projects.slice().sort((a, b) => {
+            if (newSortOrder === 'asc') {
+                return new Date(a.installationDate) - new Date(b.installationDate);
+            } else {
+                return new Date(b.installationDate) - new Date(a.installationDate);
+            }
+        });
+
+        setProjects(sortedProjects);
     };
 
     return (
@@ -73,9 +91,22 @@ function Projects() {
                         <tr className='table-headings'>
                             <th>Site Name</th>
                             <th>Location</th>
-                            <th className='sort'><img src={sort} alt='sorting' /><span>Installation Date</span></th>
+                            <th className='sort' onClick={handleSortClick} >
+                                <img
+                                    src={sort}
+                                    alt='sorting'
+                                    style={{ transform: sortOrder === 'asc' ? 'rotate(0deg)' : 'rotate(180deg)', cursor: 'pointer' }}
+                                />
+                                <span>Installation Date</span>
+                            </th>
                             <th>Customer</th>
-                            <th className='sort'><img src={sort} alt='sorting' /><span>Status</span></th>
+                            <th className='sort' >
+                                <img
+                                    src={sort}
+                                    alt='sorting'
+                                />
+                                <span>Status</span>
+                            </th>
                             <th></th>
                         </tr>
                     </thead>

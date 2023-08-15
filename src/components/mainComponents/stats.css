@@ -95,7 +95,7 @@
 }
 
 .stat-info>.color1 {
-    background-color: #045097;
+    stroke: #045097;
 }
 
 .stat-info>.color2 {
@@ -171,6 +171,8 @@
     flex-direction: column;
     gap: 20px;
     z-index: 1;
+
+    min-width: 85px;
 }
 
 .right-stat-container .left {
@@ -244,16 +246,34 @@
 
 
 /* Animations */
-.scale:hover {
-    transform: scale(1.5);
+.anim-1.scale:hover {
+    /* transform: scale(1.5); */
     transform: rotate(-90deg);
-    stroke-width: 30;
+    stroke-width: 20;
+    /* r: 82.5; */
+    /* stroke-dasharray: 549.7787143 549.7787143 !important; */
+    transition: all 0.3s ease-in-out;
+}
+.anim-2.scale:hover {
+    transform: rotate(-90deg);
+    stroke-width: 20;
+    /* r: 62.5; */
+    /* stroke-dasharray: 329.397 392.699082 !important; */
+    transition: all 0.3s ease-in-out;
+}
+.anim-3.scale:hover {
+    /* transform: scale(1.5); */
+    transform: rotate(-90deg);
+    stroke-width: 20;
+    /* r: 42.5; */
+    /* stroke-dasharray: 54.128087 267.035 !important; */
+    transition: all 0.3s ease-in-out;
 }
 
 
 .anim-1 {
     stroke-dasharray: 0, 502.6548245743669;
-    animation: one 2s ease-out 1s forwards ;
+    animation: one 2s ease-out 1s forwards;
 }
 
 @keyframes one {
@@ -277,13 +297,13 @@
     }
 
     to {
-        stroke-dasharray: 358.2955005492623, 408.4070449666731;
+        stroke-dasharray: 343.2955005492623, 408.4070449666731;
     }
 }
 
 .anim-3 {
     stroke-dasharray: 0, 314.1592653589793;
-    animation: three 1s ease-out 1s forwards ;
+    animation: three 1s ease-out 1s forwards;
 }
 
 @keyframes three {
@@ -292,7 +312,38 @@
     }
 
     to {
-        stroke-dasharray: 63.68008308826511, 314.1592653589793;
+        stroke-dasharray: 48.68008308826511, 314.1592653589793;
+    }
+}
+
+
+.anim-4 {
+    stroke-dasharray: 0, 502.6548245743669;
+    animation: four 2s ease-out 1s forwards;
+}
+
+@keyframes four {
+    from {
+        stroke-dasharray: 0, 502.6548245743669;
+    }
+
+    to {
+        stroke-dasharray: 2.5133, 2.5133 ;
+    }
+}
+
+.anim-5 {
+    stroke-dasharray: 0, 502.6548245743669;
+    animation: five 2s ease-out 1s forwards;
+}
+
+@keyframes five {
+    from {
+        stroke-dasharray: 0 502.6548245743669;
+    }
+
+    to {
+        stroke-dasharray: 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 2.5133 0 10000 ;
     }
 }
 
